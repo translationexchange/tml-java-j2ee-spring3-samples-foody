@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="welp" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Welp</display-name>
+
+	<listener>
+		<listener-class>com.translationexchange.samples.spring.foody.listeners.FoodyListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>tml_cache_invalidator</servlet-name>
+		<servlet-class>com.translationexchange.j2ee.servlets.CacheInvalidationServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>tml_cache_invalidator</servlet-name>
+		<url-pattern>/tml/upgrade</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>spring-web</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>spring-web</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
