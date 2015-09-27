@@ -6,9 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="google" content="notranslate">
 <title>Foody</title>
+
+<link rel="icon" type="image/ico" href="/assets/favicon.ico">
+
 <link rel='stylesheet'
 	href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" />
-	
+
 <tml:stylesheet_link ltr="/assets/stylesheets/bootstrap.min.css"
 	rtl="/assets/stylesheets/bootstrap.rtl.min.css" />
 

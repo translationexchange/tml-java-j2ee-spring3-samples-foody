@@ -51,6 +51,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.translationexchange.core.Utils;
+import com.translationexchange.samples.spring.foody.models.Category;
+
+import org.javalite.activejdbc.Base;
 
 @Controller
 public class HomeController {
@@ -61,7 +64,7 @@ public class HomeController {
 	private Map<String, Object> getData() throws IOException {
 		if (data == null) {
 			StringBuilder sb = new StringBuilder();
-			BufferedReader br = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/data.json")));
+			BufferedReader br = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream("/recipes.json")));
 			String read = br.readLine();
 			while (read != null) {
 			    sb.append(read);
@@ -105,7 +108,11 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView index(ModelMap modelMap) throws ServletException, IOException {		
+	public ModelAndView index(ModelMap modelMap) throws ServletException, IOException {
+//		Base.open("org.sqlite.JDBC", "jdbc:sqlite:recipes.db", "root", "");
+//		System.out.println(Category.count());
+//		Base.close();
+		
 		ModelAndView model = new ModelAndView();
 		model.setViewName("index");
 		model.addObject("categories", getCategories());
