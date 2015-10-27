@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="tml" uri="/tml-tags"%>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
 
 <div class="navbar navbar-default">
 	<div class="container">
@@ -10,7 +11,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/"><strong>Foody</strong></a>
+			<a class="navbar-brand" href="<s:url value="/"/>"><strong>Foody</strong></a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">

@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="tml" uri="/tml-tags"%>
 
 <!doctype html>
@@ -48,7 +48,7 @@
 						</div>
 						<div class="col-sm-5 col-lg-offset-1">
 							<div class="panel panel-default">
-								<img src="/assets/images/chicken-pasta-salad.jpg"
+								<img src="<s:url value="/assets/${recipe.image}"/>"
 									class="img-responsive">
 								<div class="panel-body">
 									<h5>

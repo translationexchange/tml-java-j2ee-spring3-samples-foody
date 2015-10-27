@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="tml" uri="/tml-tags"%>
 
 <!doctype html>
@@ -12,8 +12,9 @@
 
 <body data-spy='scroll' data-target='#nav-categories'>
 	<%@ include file="layout/navigation.jsp"%>
-
-	<div class="jumbotron text-center">
+	
+	<s:url value="/assets" var="style" htmlEscape="true"/>
+	<div class="jumbotron text-center" style="background:url(${style}/images/hero.jpg) center center no-repeat;">
 		<div class="container">
 			<h1>
 				<tml:tr>The Best in International Food</tml:tr>
@@ -50,9 +51,9 @@
 							<c:forEach items="${recipes_by_categories[category.id]}"
 								var="recipe">
 								<div class="col-lg-4 col-md-6">
-									<a href="/recipe/${recipe.id}"
+									<a href="<s:url value="/recipe/${recipe.id}"/>"
 										class="panel panel-default recipe-thumbnail"> <img
-										src="/assets${recipe.image}" class="img-responsive">
+										src="<s:url value="/assets/${recipe.image}"/>" class="img-responsive">
 										<div class="panel-body">
 											<h4>
 												<tml:tr label="${recipe.name}" />
