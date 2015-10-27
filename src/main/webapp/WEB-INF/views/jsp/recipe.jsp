@@ -20,7 +20,7 @@
 				<div class="col-md-10 col-md-offset-1">
 					<div class="row">
 						<div class="col-lg-6 col-sm-7">
-							<a href="/" class="back-btn"><tml:tr>Back</tml:tr></a>
+							<a href="<s:url value="/"/>" class="back-btn"><tml:tr>Back</tml:tr></a>
 							<div class="recipe">
 								<h2>
 									<tml:tr label="${recipe.name}" />
