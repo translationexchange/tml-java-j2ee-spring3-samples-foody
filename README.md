@@ -16,8 +16,29 @@ If you are using Maven, use the following procedures:
 $ git clone https://github.com/translationexchange/tml-java-j2ee-spring3-samples-foody.git
 ```
 
-Import the project into Eclipse using the Maven plugin and run the web application.
+Import the project into Eclipse using the Maven plugin:
+  * Import Project as existing Maven Project
+  * Browse to folder where you cloned the project and select presented pom.xml project file
 
+Configure Tomcat server in Eclipse:
+  * Select Server Tag and create new server
+  * Select your prefered Tomcat server, click next
+    * (optional) You can change Server name or leave it default,
+  * All all Resources from Available tab to Configured within Resources window and click finish
+  * By default Path is /tml-spring3-samples-foody, same as name of the applicaiton and artifactId
+    * you can change it to anything you prefer under server Web Module settings
+
+How to start sample app without Eclipse:
+  * Download Tomcat and extract it to any folder
+  * copy .war file from /Git Cloned Directory/target/tml-spring3-samples-foody-0.2.1.war to /Tomcat Path/webapps
+  * start Tomcat:
+    ```bash
+    $ bin/startup.sh
+    ```
+  * by default .war get extracted under webapps and availble at http://localhost:8080/tml-spring3-samples-foody-0.2.1
+
+
+For more information on Java TML check www.translationexchange.com/docs
 
 Links
 ==================

@@ -20,6 +20,7 @@ public class FoodyListener extends TmlListener {
 //	        "namespace", "c41b8ffaf8c98"
 //		));
 
+
 		Tml.getConfig().setCache(Utils.buildMap(
 				"enabled",  false,
 		    	"class", 	"com.translationexchange.cache.EHCache",
